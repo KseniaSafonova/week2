@@ -2,11 +2,8 @@ const loadBtn = document.querySelector(".js-load");
 const resultsContainer = document.querySelector(".js-results");
 const searchInput = document.querySelector(".js-input");
 
-//   .catch(err => console.log(err));
-
-
-loadBtn.addEventListener("click", function () {
-
+loadBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
     const searchValue = searchInput.value.trim().toLowerCase();
     fetch(`https://api.github.com/users/${searchValue}`)
         .then(response => response.json())

@@ -11,11 +11,13 @@ loadBtn.addEventListener("click", function (evt) {
     .then(res => res.data.map((el) =>
       resultsContainer.innerHTML +=
       `<div class="response-container">
-    <p> ID: <span>${el.id}</span></p>
-    <p> Name: <span>${el.name}</span><p>
-    <p> E-mail: <span>${el.email}</span><p>
+    <p>ID: <span>${el.id}</span></p>
+    <p>Name: <span>${el.name}</span><p>
+    <p>UserName: <span>${el.username}</span><p>
+    <p>Phone: <span>${el.phone}</span><p>
+    <p>E-mail: <span>${el.email}</span><p>
     <p>Website: <span>${el.website}</span></p>
-    <p> Company: <span>${el.company.name}</span><p>
+    <p>Company: <span>${el.company.name}</span><p>
     </div>`
     ))
 })
